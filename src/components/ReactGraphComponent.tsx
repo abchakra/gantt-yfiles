@@ -249,7 +249,7 @@ export default class ReactGraphComponent extends Component {
     await updateSubRows(this.graphComponent, false);
 
     this.graphComponent.viewPoint = new Point(
-      2223796,
+      2223690,
       this.graphComponent.viewPoint.y
     );
   }

@@ -52,10 +52,10 @@ export const ganttChartData: ChartData = {
   activities: [
     {
       id: 0,
-      name: 'User Polls',
+      name: 'selectable node',
       taskId: 1,
-      startTime: 10,
-      endTime: 200,
+      startTime: 2223690,
+      endTime: 2223790,
       leadTime: 24
     },
     {
