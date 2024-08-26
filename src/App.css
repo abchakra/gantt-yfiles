@@ -1,0 +1,102 @@
+.graph-component-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
+}
+
+.graph-component-container,
+.graph-component-container .yfiles-canvascomponent {
+  width: 100%;
+  height: 100%;
+}
+
+#graphComponent {
+  flex: 1;
+}
+
+#timeline-component {
+  height: 70px;
+}
+
+#timelineComponent {
+  height: 70px;
+}
+
+#timeline-component canvas {
+  height: 100%;
+  width: 100%;
+}
+
+#task-component {
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+}
+
+.task-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.task-list__task {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: white;
+  padding: 0.7rem;
+  border-bottom: 1px solid white;
+}
+
+.activity-node {
+  transition: color 0.3s ease;
+}
+
+.info {
+  position: absolute;
+  min-width: 60px;
+  padding: 0 5px;
+  height: 25px;
+  background-color: white;
+  border-radius: 8px;
+  color: #444;
+  line-height: 25px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.node-info {
+  position: absolute;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.node-info__name {
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 1rem;
+}
+
+.node-info__content {
+  display: table;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.node-info__row {
+  display: table-row;
+}
+
+.node-info__cell {
+  display: table-cell;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.node-info__cell:last-child {
+  padding-left: 1rem;
+}
