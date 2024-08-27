@@ -280,7 +280,7 @@ export default class ReactGraphComponent extends Component {
             variant="contained"
             onClick={() =>
               (this.graphComponent.viewPoint = new Point(
-                2223690,
+                170864160,
                 this.graphComponent.viewPoint.y
               ))
             }

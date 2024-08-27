@@ -57,102 +57,102 @@ export const ganttChartData: ChartData = {
       startTime: 0,
       endTime: 200,
     },
-    {
-      id: 110,
-      name: 'Cannot select node',
-      taskId: 1,
-      startTime: 2223690,
-      endTime: 2223790,
-    },
-    {
-      id: 0,
-      name: 'User Polls',
-      taskId: 1,
-      startTime: 2223796,
-      endTime: 2333178,
-      leadTime: 24
-    },
-    {
-      id: 1,
-      name: 'UI Spec',
-      taskId: 2,
-      startTime: 2206869,
-      endTime: 2211655,
-      dependencies: [0],
-      followUpTime: 6
-    },
-    {
-      id: 13,
-      name: 'API Spec',
-      taskId: 2,
-      startTime: 2219169,
-      endTime: 2223795
-    },
-    {
-      id: 2,
-      taskId: 3,
-      startTime: 2255648,
-      endTime: 2333178,
-      dependencies: [1]
-    },
-    {
-      id: 3,
-      name: 'Personnel Assignment',
-      taskId: 1,
-      startTime: 2342006,
-      endTime: 2380004,
-      dependencies: [1]
-    },
-    {
-      id: 4,
-      name: 'UI Design',
-      taskId: 2,
-      startTime: 2337603,
-      endTime: 2342005,
-      leadTime: 24,
-      dependencies: [3]
-    },
-    {
-      id: 5,
-      name: 'Implementation',
-      taskId: 2,
-      startTime: 2374888,
-      endTime: 2380004,
-      leadTime: 24,
-      followUpTime: 24,
-      dependencies: [2, 13]
-    },
-    {
-      id: 6,
-      name: 'Conv_65',
-      taskId: 1,
-      startTime: 2388477,
-      endTime: 2442569,
-      leadTime: 24,
-      followUpTime: 24,
-      dependencies: [2, 13]
-    },
-    {
-      id: 7,
-      name: 'WTS-0-Conv_65',
-      taskId: 1,
-      startTime: 2384149,
-      endTime: 2388476,
-    },
+    // {
+    //   id: 110,
+    //   name: 'Cannot select node',
+    //   taskId: 1,
+    //   startTime: 2223690,
+    //   endTime: 2223790,
+    // },
+    // {
+    //   id: 0,
+    //   name: 'User Polls',
+    //   taskId: 1,
+    //   startTime: 2223796,
+    //   endTime: 2333178,
+    //   leadTime: 24
+    // },
+    // {
+    //   id: 1,
+    //   name: 'UI Spec',
+    //   taskId: 2,
+    //   startTime: 2206869,
+    //   endTime: 2211655,
+    //   dependencies: [0],
+    //   followUpTime: 6
+    // },
+    // {
+    //   id: 13,
+    //   name: 'API Spec',
+    //   taskId: 2,
+    //   startTime: 2219169,
+    //   endTime: 2223795
+    // },
+    // {
+    //   id: 2,
+    //   taskId: 3,
+    //   startTime: 2255648,
+    //   endTime: 2333178,
+    //   dependencies: [1]
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Personnel Assignment',
+    //   taskId: 1,
+    //   startTime: 2342006,
+    //   endTime: 2380004,
+    //   dependencies: [1]
+    // },
+    // {
+    //   id: 4,
+    //   name: 'UI Design',
+    //   taskId: 2,
+    //   startTime: 2337603,
+    //   endTime: 2342005,
+    //   leadTime: 24,
+    //   dependencies: [3]
+    // },
+    // {
+    //   id: 5,
+    //   name: 'Implementation',
+    //   taskId: 2,
+    //   startTime: 2374888,
+    //   endTime: 2380004,
+    //   leadTime: 24,
+    //   followUpTime: 24,
+    //   dependencies: [2, 13]
+    // },
+    // {
+    //   id: 6,
+    //   name: 'Conv_65',
+    //   taskId: 1,
+    //   startTime: 2388477,
+    //   endTime: 2442569,
+    //   leadTime: 24,
+    //   followUpTime: 24,
+    //   dependencies: [2, 13]
+    // },
+    // {
+    //   id: 7,
+    //   name: 'WTS-0-Conv_65',
+    //   taskId: 1,
+    //   startTime: 2384149,
+    //   endTime: 2388476,
+    // },
     {
       id: 8,
       name: 'OFM-0-Conv_65-0',
       taskId: 3,
-      startTime: 2421531,
-      endTime: 2442569,
+      startTime: 170864160,
+      endTime: 170864960,
     }
     ,
     {
       id: 9,
       name: 'Conv_104',
       taskId: 2,
-      startTime: 2451432,
-      endTime: 2523370,
+      startTime: 170865520,
+      endTime: 170865320,
     },
   ]
 }
