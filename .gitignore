@@ -28,3 +28,4 @@ chrome-user-data
 *.tgz
 
 license.json
+gantt-chart-data*.json
