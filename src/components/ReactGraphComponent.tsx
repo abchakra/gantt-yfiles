@@ -26,6 +26,7 @@
  ** SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  **
  ***************************************************************************/
+import { Button } from "@mui/material";
 import { Component, createRef, RefObject } from "react";
 import {
   AdjacencyGraphBuilder,
@@ -50,7 +51,6 @@ import { ActivityNodeStyle } from "../ActivityNodeStyle";
 import { applyDemoTheme } from "../demo-styles";
 import {
   colorPalette,
-  ganttDayWidth,
   getActivityWidth,
   getLeadWidth,
   getTaskColor,
@@ -72,6 +72,7 @@ import {
 import "./ReactGraphComponent.css";
 import { TaskComponent } from "./TaskComponent";
 import { TimelineComponent } from "./TimelineComponent";
+import { configureInteraction } from "../inputs";
 
 export default class ReactGraphComponent extends Component {
   protected readonly graphComponentDiv: RefObject<HTMLDivElement>;
@@ -98,17 +99,6 @@ export default class ReactGraphComponent extends Component {
 
     // create and initializes the main graph component
     this.graphComponent = createGraphComponent();
-    // // create the component that visualizes the timeline
-    // this.timelineComponent = new TimelineComponent(
-    //   "timeline-component",
-    //   this.graphComponent
-    // );
-
-    // const timelineVisual = new TimelineVisual();
-    // this.timelineComponent.backgroundGroup.addChild(
-    //   timelineVisual,
-    //   ICanvasObjectDescriptor.VISUAL
-    // );
   }
 
   async componentDidMount(): Promise<void> {
@@ -123,11 +113,9 @@ export default class ReactGraphComponent extends Component {
     // create the component that visualizes the timeline
     new TimelineComponent("timeline-component", this.graphComponent);
 
-    // this.graphComponentDiv.current!.appendChild(this.graphComponent.div);
-    // this.timelineComponentDiv.current!.appendChild(this.timelineComponent.div);
     // configure graph item styles
     this.initializeStyles();
-    // configureInteraction(this.graphComponent, this.onGraphModified);
+    configureInteraction(this.graphComponent, this.onGraphModified);
 
     // create the graph items from the source data
     await this.populateGraph();
@@ -248,10 +236,10 @@ export default class ReactGraphComponent extends Component {
     // put overlapping nodes in sub rows
     await updateSubRows(this.graphComponent, false);
 
-    this.graphComponent.viewPoint = new Point(
-      2223690,
-      this.graphComponent.viewPoint.y
-    );
+    // this.graphComponent.viewPoint = new Point(
+    //   2223690,
+    //   this.graphComponent.viewPoint.y
+    // );
   }
 
   /**
@@ -275,6 +263,31 @@ export default class ReactGraphComponent extends Component {
   render() {
     return (
       <div style={{ width: "100vw", height: "100vh" }}>
+        <div style={{ display: "flex", gap: 10 }}>
+          <Button
+            variant="contained"
+            onClick={() =>
+              (this.graphComponent.viewPoint = new Point(
+                0,
+                this.graphComponent.viewPoint.y
+              ))
+            }
+          >
+            Zero
+          </Button>
+
+          <Button
+            variant="contained"
+            onClick={() =>
+              (this.graphComponent.viewPoint = new Point(
+                2223690,
+                this.graphComponent.viewPoint.y
+              ))
+            }
+          >
+            Large Number
+          </Button>
+        </div>
         <div id="task-component"></div>
         <div className="graph-component-container">
           <div id="timeline-component" ref={this.timelineComponentDiv}></div>

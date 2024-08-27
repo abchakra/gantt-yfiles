@@ -51,12 +51,18 @@ export const ganttChartData: ChartData = {
   ],
   activities: [
     {
-      id: 0,
-      name: 'selectable node',
+      id: 111,
+      name: 'select node',
+      taskId: 1,
+      startTime: 0,
+      endTime: 200,
+    },
+    {
+      id: 110,
+      name: 'Cannot select node',
       taskId: 1,
       startTime: 2223690,
       endTime: 2223790,
-      leadTime: 24
     },
     {
       id: 0,
